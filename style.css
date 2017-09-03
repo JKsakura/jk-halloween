@@ -1,0 +1,168 @@
+body{
+	/*background-color:#212121;*/
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 110px;
+    overflow: hidden;
+}
+
+* { margin: 0; padding: 0; }
+
+/* ---------- show the background image --------- */
+html {
+    background: url(http://pozadine.info/wp-content/uploads/2013/10/Mra%C4%8Dna-no%C4%87-vje%C5%A1tica.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}   
+
+/* ---------- Set up the form style ----------- */
+.box{
+	background-color:#fff;
+	position:relative;
+	width:610px;
+    left: 50%;
+    margin-left: -305px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top:80px;
+    padding-bottom: 80px;
+}
+
+/* ---------- Set up the style to hold the radio button ---------- */
+.radioContainer {
+    padding-bottom: 30px;
+}
+.radioLabel {
+    margin-left: 10px;
+}
+
+/* ---------- set the text fields style ---------- */
+.inputContainer {
+}
+
+.inputBox{
+	margin:auto;
+	width:460px;
+	height:60px;
+	margin-top:20px;
+	margin-left:70px;
+}
+
+.inputLabel {
+	position:relative;
+	float:left;
+	width:150px;
+	height:24px;
+	margin-top:8px;
+    font-size: 20px;
+}
+
+.inputText {
+	position:relative;
+	float:right;
+	width:300px;
+	height:40px;
+	margin-right: 0px;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    font-size: 20px;
+}
+
+/* ---------- set the Submit button style ---------- */
+.loginBox {
+    display: block;
+}
+
+.logInButton {
+	width:150px;
+	height:60px;
+    margin-top: 40px;
+	text-align:center;
+	color:#FFF;
+    /*background: #4192f6;*/
+    background: red;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+	transition: all 0.3s;
+}
+
+.logInButton:hover{
+	width:150px;
+	height:60px;
+	text-align:center;
+    border-radius: 5px;
+    /*background: #276bbe;*/
+    background: #c60000;
+	color:#fff;
+    cursor: pointer;
+}
+
+/* ---------- set the welcome page's style ---------- */
+.welcome {
+    display: none;
+}
+
+/* ---------- set the style of caution text ---------- */
+.caution {
+    display: none;
+    color: red;
+    font-size: 18px;
+}
+
+/* ---------- set the style of the changing password button ---------- */
+.changeBox {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+#changeButton {
+    margin-left: -10px;
+    background: #2bec4f;
+}
+
+#changeButton:hover {
+    background: #14a32e;
+    cursor: pointer;
+}
+
+#noChangeButton {
+    margin-left: 10px;
+    background: #f22626;
+}
+
+#noChangeButton:hover {
+    margin-left: 10px;
+    background: #b60f0f;
+    cursor: pointer;
+}
+
+/* ----------- set the style of creating new account button ---------- */
+#createButton {
+    margin-left: -10px;
+    background: #2bec4f;
+}
+
+#createButton:hover {
+    background: #14a32e;
+    cursor: pointer;
+}
+
+#noCreateButton {
+    margin-left: 10px;
+    background: #f22626;
+}
+
+#noCreateButton:hover {
+    margin-left: 10px;
+    background: #b60f0f;
+    cursor: pointer;
+}
+
+/* ---------- set the bonus form to hiddened ----------*/
+#box_bonus {
+    display: none;
+}

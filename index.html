@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>One Easy Login Practice</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Link to the Web Font -->
+    <link href='https://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+</head>
+<body onload="checkRadio()">
+    <h1 style="color:red; font-family: 'Nosifer', cursive; font-size:50px; margin-top:-40px; padding-bottom:40px;">Halloween Party!</h1>
+    <form class="box" id="box">
+        <!-- A div to hold the radio button -->
+        <div class="radioContainer" id="radioContainer">
+            <label>Log In</label>
+            <input type="radio" name="radioBox" id="logIn" checked="checked" onclick="checkRadio()">
+            <label class="radioLabel">New Account</label>
+            <input type="radio" name="radioBox" id="newAccount" onclick="checkRadio()">
+            <label class="radioLabel">Continue as Guest</label>
+            <input type="radio" name="radioBox" id="guest" onclick="checkRadio()"><br/>
+        </div>
+        
+        <!-- A div to hold the text fields -->
+        <div class="inputContainer" id="inputContainer">
+            <div class="inputBox" id="inputBox1">
+                <label class="inputLabel" id="inputLabel1"></label>
+                <input type="textfield" class="inputText" id="input1" oninput="showLogin()"><br/>
+            </div>
+            <div class="inputBox" id="inputBox2">
+                <label class="inputLabel">Password</label>
+                <input type="password" class="inputText" id="input2" oninput="showLogin()">
+            </div>
+            <div class="inputBox" id="inputBox3">
+                <label class="inputLabel">Verify Password</label>
+                <input type="password" class="inputText" id="input3" oninput="showLogin(), checkPassword()">
+                <p id="notMatch" style="width:100%; color:red; text-align:center; float:left; padding-left:12px; font-size:18px; display:none;">Passwords must Match!</p>
+            </div>
+        </div>
+        
+        <!-- A div to hold the Submit button -->
+        <div class="loginBox" id="loginBox">
+            <input type="button" value="Submit" class="logInButton" id="logInButton" onclick="inputEmpty()">
+        </div>
+        <div class="welcome" id="welcome"></div>
+        <div class="caution" id="caution">CAUTION: Your password may not be very secure.</div>
+        
+        <div class="changeBox" id="changeBox">
+                <h3 style="margin-top:100px; color:#1962ff;">Would you like to change your password now?</h3>
+                <input type="button" value="Yes" class="logInButton" id="changeButton" onclick="changePassword()" style="margin-top:20px;">
+                <input type="button" value="No" class="logInButton" id="noChangeButton" onclick="noChangePassword()" style="margin-top:20px;">
+        </div>
+        
+        <!-- A div to hold the Change password button -->
+        <div class="changeBox" id="createBox">
+                <h3 style="margin-top:100px; color:#1962ff;">Would you like to create an account now?</h3>
+                <input type="button" value="Yes" class="logInButton" id="createButton" onclick="createAccount()" style="margin-top:20px;">
+                <input type="button" value="No" class="logInButton" id="noCreateButton" onclick="noCreateAccount()" style="margin-top:20px;">
+        </div>
+    </form>
+    
+    <!-- Below is the bonus Part -->
+    <form class="box" id="box_bonus">
+        <div class="inputContainer" id="inputContainer_bonus">
+            <div class="inputBox" id="inputBox1_bonus">
+                <label class="inputLabel" id="inputLabel1">Old Password</label>
+                <input type="password" class="inputText" id="input1_bonus" oninput="showLogin_bonus(), checkPassword_bonus()"><br/>
+                <p id="wrongPassword_bonus" style="width:100%; color:red; text-align:center; float:left; padding-left:12px; font-size:18px; display:none;">Wrong Old Password!</p>
+            </div>
+            <div class="inputBox" id="inputBox2_bonus">
+                <label class="inputLabel">New Password</label>
+                <input type="password" class="inputText" id="input2_bonus" oninput="showLogin_bonus(), checkPassword_bonus()">
+            </div>
+            <div class="inputBox" id="inputBox3_bonus">
+                <label class="inputLabel">Verify Password</label>
+                <input type="password" class="inputText" id="input3_bonus" oninput="showLogin_bonus(), checkPassword_bonus()">
+                <p id="notMatch_bonus" style="width:100%; color:red; text-align:center; float:left; padding-left:12px; font-size:18px; display:none;">Passwords must Match!</p>
+            </div>
+        </div>
+        <div class="loginBox" id="loginBox_bonus">
+            <input type="button" value="Submit" class="logInButton" id="logInButton_bonus" onclick="samePassword()">
+        </div>
+        <div class="welcome" id="welcome_bonus"></div>
+        <div class="caution" id="caution_bonus">CAUTION: Your password may not be very secure.</div>
+    </form>
+</body>
+<script src="script.js"></script>
+
+</html>
